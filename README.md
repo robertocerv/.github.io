@@ -1,2 +1,2 @@
 # Mi puchunguita te amo!!!
-![Imagen](temp.png)
+![Imagen](puchunguita.png)
