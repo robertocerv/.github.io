@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Procurement Intelligence Portal — Case Study | Roberto Cervantes</title>
-  <meta name="description" content="Caso de estudio: Procurement Intelligence Portal, plataforma de inteligencia de compras y proveedores." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Intelligent Procurement Management Portal — Case Study | Roberto Cervantes</title>
+
+  <meta
+    name="description"
+    content="Solutions Architecture case study by Roberto Cervantes: an intelligent procurement platform that reduced critical purchasing process execution times by up to 99%."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../assets/styles.css">
 </head>
+
 <body>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="wrap">
       <a href="../index.html" class="brand">Roberto Cervantes<span></span></a>
+
       <nav class="main-nav" id="main-nav">
         <a href="../index.html#summary">Summary</a>
         <a href="../index.html#expertise">Expertise</a>
@@ -22,7 +35,13 @@
         <a href="../index.html#education">Education</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
         <span></span>
       </button>
     </div>
@@ -31,33 +50,55 @@
   <!-- CASE HERO -->
   <section class="hero case-hero">
     <div class="wrap">
-      <a href="../index.html#projects" class="back-link">← Volver a proyectos</a>
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;">
+
+      <a href="../index.html#projects" class="back-link">
+        ← Back to projects
+      </a>
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
         <div>
           <span class="field-label">Case Study — Item 01</span>
-          <h1 style="margin-top:8px; font-size:clamp(2rem,4.5vw,3.2rem);">Procurement Intelligence Portal</h1>
-          <p class="lede" style="margin-top:14px;">Reemplaza con una frase que resuma el proyecto: qué es, para quién se construyó y el problema central que resuelve.</p>
+
+          <h1 style="margin-top: 8px; font-size: clamp(2rem, 4.5vw, 3.2rem);">
+            Intelligent Procurement Management Portal
+          </h1>
+
+          <p class="lede" style="margin-top: 14px;">
+            A purpose-built procurement intelligence platform that replaced more than
+            seven years of spreadsheet-based analysis, reducing execution times for
+            critical purchasing processes by up to 99% without replacing the legacy ERP.
+          </p>
         </div>
-        <span class="status-pill">Delivered</span>
+
+        <span class="status-pill">In Production</span>
       </div>
 
       <div class="case-meta-grid">
+
         <div>
           <span class="field-label">Role</span>
-          <span class="field-value">Lead / Rol en el proyecto</span>
+          <span class="field-value">
+            Internal Solution Architecture, Development &amp; Deployment
+          </span>
         </div>
+
         <div>
-          <span class="field-label">Duration</span>
-          <span class="field-value">Ej. 6 meses</span>
+          <span class="field-label">Project Type</span>
+          <span class="field-value">Production</span>
         </div>
+
         <div>
           <span class="field-label">Stack</span>
-          <span class="field-value">Ej. Power BI, SQL, Python</span>
+          <span class="field-value">
+            .NET 8 · ASP.NET Core MVC · SQL Server · EF Core · Generative AI
+          </span>
         </div>
+
         <div>
           <span class="field-label">Sector</span>
-          <span class="field-value">Ej. Manufactura / Retail</span>
+          <span class="field-value">Precision Manufacturing</span>
         </div>
+
       </div>
     </div>
   </section>
@@ -65,75 +106,408 @@
   <!-- CHALLENGE -->
   <section class="section case-section">
     <div class="wrap">
+
       <div class="section-head">
         <span class="entry-number">01</span>
-        <h2>El desafío</h2>
+        <h2>The Challenge</h2>
       </div>
-      <p>Describe aquí el problema de negocio original: falta de visibilidad del gasto, procesos manuales, datos dispersos entre proveedores, riesgo no gestionado, etc.</p>
-      <p>Puedes añadir un segundo párrafo con contexto adicional: quién pidió la solución, qué restricciones existían (tiempo, presupuesto, sistemas legados) y qué pasaba si el problema no se resolvía.</p>
+
+      <p>
+        The procurement department of a mid-sized precision manufacturing company
+        had operated for more than seven years relying primarily on Excel and Word
+        to manage critical sourcing processes, including reorder calculations,
+        purchase order follow-up, strategic materials analysis, and specialized
+        tooling management.
+      </p>
+
+      <p>
+        This created recurring operational problems: late or poorly sized purchases,
+        limited traceability, tooling shortages, delays in export documentation,
+        fragmented information, and purchasing decisions that depended heavily on
+        individual analyst judgment.
+      </p>
+
+      <p>
+        A modern ERP replacement had been evaluated for approximately two years,
+        but its licensing and implementation costs were not economically viable.
+        The solution therefore needed to improve the existing operation without
+        replacing or modifying the corporate ERP.
+      </p>
+
       <div class="case-callout">
-        "Cita opcional de un stakeholder o hallazgo clave que resuma el dolor del problema."
+        The core challenge was not simply automating spreadsheets — it was creating
+        a reliable intelligence layer capable of standardizing decisions while
+        protecting the company's critical legacy system.
       </div>
+
     </div>
   </section>
 
   <!-- APPROACH -->
   <section class="section case-section">
     <div class="wrap">
+
       <div class="section-head">
         <span class="entry-number">02</span>
-        <h2>El enfoque</h2>
+        <h2>The Approach</h2>
       </div>
+
       <div class="case-two-col">
+
         <div>
-          <p>Explica tu proceso: descubrimiento, entrevistas con stakeholders, mapeo de datos, definición de requerimientos.</p>
-          <p>Menciona decisiones clave de diseño o arquitectura y por qué las tomaste.</p>
+          <p>
+            The project started by analyzing the procurement department's operational
+            workflows, recurring problems, business rules, data dependencies, and
+            infrastructure constraints.
+          </p>
+
+          <p>
+            Rather than attempting to replace the ERP, the solution was designed as
+            an independent intelligence layer that consumes ERP information in
+            read-only mode and performs analysis against a synchronized local copy.
+          </p>
         </div>
+
         <div>
-          <p>Describe cómo colaboraste con otros equipos (TI, finanzas, proveedores) y cualquier iteración importante del proyecto.</p>
-          <p>Si hubo prototipos o pruebas piloto, menciónalos aquí.</p>
+          <p>
+            An incremental delivery strategy was used. Each module was designed,
+            developed, and validated against real production data before expanding
+            the platform to additional processes.
+          </p>
+
+          <p>
+            Architecture decisions were evaluated based on business value, operational
+            risk, cost, technical feasibility, maintainability, and the capabilities
+            of the existing infrastructure.
+          </p>
         </div>
+
       </div>
+
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">03</span>
+        <h2>Architecture</h2>
+      </div>
+
+      <h3>As-Is</h3>
+
+      <p>
+        Procurement analysis depended on manual exports from the legacy ERP into
+        spreadsheets. Individual analysts performed calculations independently,
+        with no centralized repository, standardized workflow, or complete audit
+        history.
+      </p>
+
+      <img
+        src="../assets/projects/procurement/as-is.png"
+        alt="As-Is procurement architecture"
+        style="width: 100%; margin-top: 24px;"
+      >
+
+      <h3 style="margin-top: 48px;">To-Be</h3>
+
+      <p>
+        The new architecture introduced a web-based intranet platform operating as
+        an intelligence layer above the existing ERP. Relevant information is
+        periodically synchronized into a local repository where business rules,
+        analysis engines, workflows, and AI-assisted capabilities operate without
+        impacting the source system.
+      </p>
+
+      <img
+        src="../assets/projects/procurement/to-be-hld.png"
+        alt="To-Be high-level solution architecture"
+        style="width: 100%; margin-top: 24px;"
+      >
+
     </div>
   </section>
 
   <!-- SOLUTION -->
   <section class="section case-section">
     <div class="wrap">
+
       <div class="section-head">
-        <span class="entry-number">03</span>
-        <h2>La solución</h2>
+        <span class="entry-number">04</span>
+        <h2>The Solution</h2>
       </div>
-      <p>Describe qué construiste: módulos del portal (dashboards de gasto, scorecards de proveedores, alertas de riesgo, etc.) y cómo funcionan en conjunto.</p>
-      <p>Incluye aquí una o dos capturas de pantalla del portal cuando las tengas — reemplaza este párrafo por una imagen usando &lt;img src="..." alt="..."&gt;.</p>
+
+      <p>
+        The resulting platform centralizes procurement analysis, purchase order
+        follow-up, inventory-related calculations, specialized tooling management,
+        approval workflows, reporting, and AI-assisted decision support within a
+        single internal system.
+      </p>
+
+      <div class="case-two-col">
+
+        <div>
+          <h3>Core Capabilities</h3>
+
+          <ul>
+            <li>Automated ERP data synchronization.</li>
+            <li>Standardized sourcing calculations.</li>
+            <li>Purchase order and request tracking.</li>
+            <li>Calculation → Review → Approval workflow.</li>
+            <li>Immutable decision history and audit trail.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Supporting Capabilities</h3>
+
+          <ul>
+            <li>AI-assisted analysis for complex scenarios.</li>
+            <li>Role-based access control.</li>
+            <li>Excel and PDF export capabilities.</li>
+            <li>Local operation during temporary ERP outages.</li>
+            <li>Centralized procurement information.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE DECISIONS -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">05</span>
+        <h2>Key Architecture Decisions</h2>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.1</span>
+        <h3>Build vs. Buy</h3>
+        <span class="desc">
+          A purpose-built platform was selected instead of replacing the ERP,
+          avoiding a major software investment while addressing the department's
+          specific operational requirements.
+        </span>
+        <span class="tag">Cost</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.2</span>
+        <h3>On-Premise Deployment</h3>
+        <span class="desc">
+          Existing company infrastructure was used instead of dedicated cloud
+          infrastructure, eliminating additional recurring hosting costs.
+        </span>
+        <span class="tag">Infrastructure</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.3</span>
+        <h3>Read-Only ERP Integration</h3>
+        <span class="desc">
+          The legacy ERP remained the source of truth and cannot be modified by
+          the portal, reducing the risk of affecting critical corporate operations.
+        </span>
+        <span class="tag">Risk</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.4</span>
+        <h3>Local Data Synchronization</h3>
+        <span class="desc">
+          Analytical workloads run against a synchronized local repository instead
+          of querying the ERP directly, improving performance and operational resilience.
+        </span>
+        <span class="tag">Performance</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.5</span>
+        <h3>Formal Approval Workflow</h3>
+        <span class="desc">
+          Purchasing analyses follow a Calculation → Review → Approval workflow,
+          creating a reproducible and auditable decision process.
+        </span>
+        <span class="tag">Governance</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">06</span>
+        <h2>Security &amp; Risk</h2>
+      </div>
+
+      <div class="case-two-col">
+
+        <div>
+          <h3>Security Controls</h3>
+
+          <ul>
+            <li>Secure password hashing.</li>
+            <li>Role-based access control (RBAC).</li>
+            <li>Protected configuration for external credentials.</li>
+            <li>Administrative control over password resets.</li>
+            <li>Audit logging for relevant user interactions.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Risk Mitigation</h3>
+
+          <ul>
+            <li>Read-only ERP integration prevents accidental source-system modification.</li>
+            <li>Concurrency controls protect synchronization processes.</li>
+            <li>Local data availability provides resilience during temporary ERP outages.</li>
+            <li>Immutable history improves traceability of purchasing decisions.</li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- IMPACT -->
   <section class="section case-section">
     <div class="wrap">
+
       <div class="section-head">
-        <span class="entry-number">04</span>
-        <h2>Impacto</h2>
+        <span class="entry-number">07</span>
+        <h2>Business Impact</h2>
       </div>
+
       <div class="case-metrics">
+
         <div class="figure">
-          <span class="num">0%</span>
-          <span class="label">Reducción de tiempo de ciclo</span>
+          <span class="num">97%</span>
+          <span class="label">Procurement analysis time reduction</span>
         </div>
+
         <div class="figure">
-          <span class="num">$0M</span>
-          <span class="label">Ahorro anual estimado</span>
+          <span class="num">99%</span>
+          <span class="label">Purchase order follow-up time reduction</span>
         </div>
+
         <div class="figure">
-          <span class="num">0</span>
-          <span class="label">Proveedores integrados</span>
+          <span class="num">96%</span>
+          <span class="label">Operational meeting time reduction</span>
         </div>
+
       </div>
-      <p style="margin-top:32px;">Cierra con una reflexión breve: lecciones aprendidas, próximos pasos del proyecto o cómo se mantiene el portal hoy en día.</p>
+
+      <div class="case-two-col" style="margin-top: 40px;">
+
+        <div>
+          <h3>Before</h3>
+
+          <ul>
+            <li>~30 minutes per sourcing analysis.</li>
+            <li>~2 hours per purchase order follow-up.</li>
+            <li>~2 hours per operational tracking meeting.</li>
+            <li>~30 minutes per proforma invoice.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>After</h3>
+
+          <ul>
+            <li>~1 minute per sourcing analysis.</li>
+            <li>~1 minute per purchase order follow-up.</li>
+            <li>~5 minutes per operational tracking meeting.</li>
+            <li>~1 minute per proforma invoice.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p style="margin-top: 32px;">
+        The solution also introduced centralized information, AI-assisted analysis,
+        standardized calculations, improved traceability, and the equivalent of one
+        full 9-hour workday of capacity redirected toward higher-value activities.
+      </p>
+
     </div>
   </section>
 
+  <!-- LESSONS -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">08</span>
+        <h2>Lessons &amp; Next Evolution</h2>
+      </div>
+
+      <div class="case-two-col">
+
+        <div>
+          <h3>Lessons Learned</h3>
+
+          <ul>
+            <li>
+              Extending a legacy platform can sometimes generate more business value
+              than replacing it.
+            </li>
+
+            <li>
+              Incremental validation against real production data reduced implementation risk.
+            </li>
+
+            <li>
+              Compatibility with familiar tools such as Excel helped accelerate user adoption.
+            </li>
+
+            <li>
+              Architectural separation between the portal and the ERP significantly
+              reduced operational risk.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Next Evolution</h3>
+
+          <ul>
+            <li>Expand AI-assisted analysis into forecasting and shortage-risk detection.</li>
+            <li>Evaluate controlled and audited ERP write-back scenarios.</li>
+            <li>Consider cloud migration if future growth justifies the investment.</li>
+            <li>Extend the platform model to additional business departments.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONFIDENTIALITY -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="case-callout">
+        <strong>Confidentiality Notice:</strong>
+        This case study has been anonymized. Company-specific information,
+        credentials, infrastructure details, proprietary data, and confidential
+        implementation details have been removed or generalized.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap">
       <span>© <span id="year"></span> Roberto Cervantes</span>
@@ -142,5 +516,6 @@
   </footer>
 
   <script src="../assets/script.js"></script>
+
 </body>
 </html>
