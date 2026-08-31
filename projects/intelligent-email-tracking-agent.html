@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Intelligent Email Tracking Agent — Case Study | Roberto Cervantes</title>
+
+  <meta
+    name="description"
+    content="Solutions Architecture case study by Roberto Cervantes: an AI agent that continuously tracks purchase orders over email, creating ~8 hours/day of follow-up capacity without adding headcount."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../index.html" class="brand">Roberto Cervantes<span></span></a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="../index.html#summary">Summary</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CASE HERO -->
+  <section class="hero case-hero">
+    <div class="wrap">
+
+      <a href="../index.html#projects" class="back-link">
+        ← Back to projects
+      </a>
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+        <div>
+          <span class="field-label">Case Study — Item 02</span>
+
+          <h1 style="margin-top: 8px; font-size: clamp(2rem, 4.5vw, 3.2rem);">
+            Intelligent Email Tracking Agent
+          </h1>
+
+          <p class="lede" style="margin-top: 14px;">
+            An AI agent that works around the clock reading a purchasing inbox and
+            proactively tracking purchase orders with suppliers, creating roughly
+            eight hours a day of follow-up capacity that did not exist before —
+            without adding headcount.
+          </p>
+
+          <p style="margin-top: 14px; font-family: var(--font-mono); font-size: 13px; color: var(--slate);">
+            📄 Full case study and arc42 architecture document available on
+            <a href="https://github.com/robertocerv/intelligent-email-tracking-agent-showcase" target="_blank" rel="noopener" style="color: var(--steel); text-decoration: underline;">GitHub</a>.
+          </p>
+        </div>
+
+        <span class="status-pill">In Production</span>
+      </div>
+
+      <div class="case-meta-grid">
+
+        <div>
+          <span class="field-label">Role</span>
+          <span class="field-value">
+            Internal Solution Architecture, Development &amp; Deployment
+          </span>
+        </div>
+
+        <div>
+          <span class="field-label">Project Type</span>
+          <span class="field-value">Production</span>
+        </div>
+
+        <div>
+          <span class="field-label">Stack</span>
+          <span class="field-value">
+            Python · FastAPI · React 19 · MySQL · Anthropic Claude
+          </span>
+        </div>
+
+        <div>
+          <span class="field-label">Sector</span>
+          <span class="field-value">Precision Manufacturing</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">01</span>
+        <h2>The Challenge</h2>
+      </div>
+
+      <p>
+        The company's purchasing department operates with a team of two buyers
+        responsible for placing and tracking purchase orders with external
+        suppliers, largely through email correspondence. Timely follow-up on open
+        purchase orders — chasing order confirmations, shipping updates, and
+        resolving delivery incidents — is critical in a precision-manufacturing
+        supply chain feeding the aerospace and oil exploration sectors, where
+        delays cascade into production schedules.
+      </p>
+
+      <p>
+        Each buyer needed an estimated four hours a day to properly track open
+        purchase order lines, on top of their core purchasing responsibilities.
+        In practice that time was never available, so follow-up was chronically
+        deprioritized, increasing the risk of undetected delays and incidents
+        surfacing late. Hiring a third person dedicated exclusively to follow-up
+        was evaluated and ruled out on budget grounds.
+      </p>
+
+      <div class="case-callout">
+        The problem was not a lack of process — it was a lack of time. The
+        solution had to create capacity, not add another manual step.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">02</span>
+        <h2>The Approach</h2>
+      </div>
+
+      <div class="case-two-col">
+
+        <div>
+          <p>
+            Rather than adding headcount, the project explored whether an AI
+            agent could continuously monitor the purchasing inbox and take over
+            the repetitive parts of follow-up: reading supplier replies,
+            classifying status and urgency, and drafting the next action.
+          </p>
+
+          <p>
+            Trust was treated as something to be earned incrementally. Every
+            AI-suggested action was classified by risk, so low-risk actions could
+            run unsupervised from day one while anything reaching a supplier
+            stayed behind a human approval queue.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            The system was delivered iteratively by a single internal owner,
+            acting as both architect and developer, with the core MVP through a
+            working frontend built in roughly one week and validated against
+            real production data as it progressed.
+          </p>
+
+          <p>
+            The AI provider was abstracted from day one behind a gateway, so the
+            model powering the analysis could change — as it did, from a local
+            model to a cloud provider — without touching the rest of the system.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">03</span>
+        <h2>Architecture</h2>
+      </div>
+
+      <h3>As-Is</h3>
+
+      <p>
+        Two buyers manually monitored their Outlook inboxes for supplier replies
+        related to open purchase orders, decided case-by-case whether a
+        situation required action, and drafted follow-up or escalation emails
+        themselves. There was no systematic tracking of a next-review date per
+        purchase order line, no consolidated view of supplier status, and no
+        automatic alerting when a line turned into an incident — visibility
+        depended entirely on a buyer having the spare time to look.
+      </p>
+
+      <h3 style="margin-top: 48px;">To-Be</h3>
+
+      <p>
+        A modular local agent sits between desktop Outlook and MySQL,
+        orchestrating two business flows: reactive analysis of incoming emails,
+        and proactive scheduled review of the purchase order portfolio. An AI
+        Gateway abstracts the model provider so the Orchestrator, persistence,
+        and frontend never depend on a specific AI vendor, and a configurable
+        autonomy matrix decides which AI-suggested actions execute automatically
+        versus which land in a human approval queue.
+      </p>
+
+      <img
+        src="../assets/projects/intelligent-email-tracking-agent/High-Level-Architecture.png"
+        alt="High-level architecture of the Intelligent Email Tracking Agent"
+        style="width: 100%; margin-top: 24px;"
+      >
+
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">04</span>
+        <h2>The Solution</h2>
+      </div>
+
+      <p>
+        The resulting agent continuously reads the purchasing inbox, classifies
+        and tracks every purchase order line, proactively reviews lines that are
+        due, drafts supplier communications, and automatically notifies the
+        buyer when a reference turns into an incident — all while keeping a
+        human approval queue for anything above a low-risk threshold.
+      </p>
+
+      <div class="case-two-col">
+
+        <div>
+          <h3>Core Capabilities</h3>
+
+          <ul>
+            <li>Reads desktop Outlook without cloud mailbox integration.</li>
+            <li>AI-based email analysis with a validated, structured contract.</li>
+            <li>Proactive purchase-order portfolio and supplier tracking.</li>
+            <li>Configurable autonomy matrix per action type.</li>
+            <li>Human approval queue for AI-drafted replies and actions.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Supporting Capabilities</h3>
+
+          <ul>
+            <li>Multi-provider AI Gateway (cloud and local models).</li>
+            <li>Conversational query interface and live dashboard.</li>
+            <li>Automatic buyer notification on incident status.</li>
+            <li>Live-editable prompts, business rules, and autonomy matrix.</li>
+            <li>Per-supplier communication language for outgoing drafts.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE DECISIONS -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">05</span>
+        <h2>Key Architecture Decisions</h2>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.1</span>
+        <h3>AI Gateway / Model Router</h3>
+        <span class="desc">
+          No component depends directly on a specific AI vendor; provider
+          selection is a configuration change, not a code change.
+        </span>
+        <span class="tag">Flexibility</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.2</span>
+        <h3>Autonomy Matrix</h3>
+        <span class="desc">
+          Every AI-suggested action is classified by risk, letting low-risk
+          actions run automatically while trust in the agent builds
+          incrementally for everything else.
+        </span>
+        <span class="tag">Risk</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.3</span>
+        <h3>Desktop Outlook Integration (COM)</h3>
+        <span class="desc">
+          Reads the same mailbox a buyer already has open via COM automation,
+          avoiding new cloud API permissions or IT approval overhead.
+        </span>
+        <span class="tag">Infrastructure</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="entry-number">5.4</span>
+        <h3>MySQL as the Sole System of Record</h3>
+        <span class="desc">
+          No external broker or vector store; deliberately minimal
+          infrastructure matched to actual scale, with clean interfaces to
+          allow scaling later if needed.
+        </span>
+        <span class="tag">Simplicity</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">06</span>
+        <h2>Security &amp; Risk</h2>
+      </div>
+
+      <div class="case-two-col">
+
+        <div>
+          <h3>Security Controls</h3>
+
+          <ul>
+            <li>Secrets managed via system environment variables.</li>
+            <li>Intranet-only tool, no inbound exposure.</li>
+            <li>Autonomy matrix bounds unsupervised execution.</li>
+            <li>Human approval queue for external-facing communication.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Risk Mitigation</h3>
+
+          <ul>
+            <li>AI Gateway allows falling back to a local model via configuration.</li>
+            <li>Autonomy matrix reviewed periodically as trust in the agent grows.</li>
+            <li>Activity log provides traceability for processed emails and actions.</li>
+            <li>Duplicate-notification protection on automated buyer alerts.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">07</span>
+        <h2>Business Impact</h2>
+      </div>
+
+      <div class="case-metrics">
+
+        <div class="figure">
+          <span class="num">~8h</span>
+          <span class="label">Follow-up capacity created per day</span>
+        </div>
+
+        <div class="figure">
+          <span class="num">2</span>
+          <span class="label">Buyers freed from manual inbox triage</span>
+        </div>
+
+        <div class="figure">
+          <span class="num">0</span>
+          <span class="label">Additional headcount required</span>
+        </div>
+
+      </div>
+
+      <div class="case-two-col" style="margin-top: 40px;">
+
+        <div>
+          <h3>Before</h3>
+
+          <ul>
+            <li>~4 hours/day per buyer needed for PO follow-up, never available.</li>
+            <li>Follow-up chronically deprioritized behind core buying work.</li>
+            <li>A dedicated follow-up hire evaluated and ruled out on budget.</li>
+            <li>No systematic next-review tracking per purchase order line.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>After</h3>
+
+          <ul>
+            <li>Purchasing inbox monitored continuously, 24/7 while the host machine is on.</li>
+            <li>Every PO line reviewed on schedule, not only when time allows.</li>
+            <li>Buyers start from an already-analyzed, already-tracked case.</li>
+            <li>Incidents flagged and routed automatically at the moment of detection.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p style="margin-top: 32px;">
+        The equivalent of roughly eight hours a day of follow-up capacity was
+        created across the two-person buying team — capacity that did not exist
+        before — without hiring, and without reducing the quality of tracking.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- LESSONS -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <span class="entry-number">08</span>
+        <h2>Lessons &amp; Next Evolution</h2>
+      </div>
+
+      <div class="case-two-col">
+
+        <div>
+          <h3>Lessons Learned</h3>
+
+          <ul>
+            <li>
+              Abstracting the AI provider from day one paid off almost
+              immediately when the primary model was swapped during development.
+            </li>
+
+            <li>
+              An autonomy matrix is a better adoption strategy than deciding
+              upfront whether an agent should be fully autonomous.
+            </li>
+
+            <li>
+              Storing prompts and business rules in the database instead of code
+              made behavior tuning possible without a deployment.
+            </li>
+
+            <li>
+              Keeping infrastructure minimal matched the actual problem size and
+              let one person ship a production system in about a week.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Next Evolution</h3>
+
+          <ul>
+            <li>Introduce automated regression testing for prompt/rule changes.</li>
+            <li>Add lightweight observability as email and action volume grows.</li>
+            <li>Periodically tighten the autonomy matrix as more actions prove reliable.</li>
+            <li>Evaluate Microsoft Graph if the system needs to run PC-independent.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONFIDENTIALITY -->
+  <section class="section case-section">
+    <div class="wrap">
+
+      <div class="case-callout">
+        <strong>Confidentiality Notice:</strong>
+        This case study has been anonymized. The company name, supplier names,
+        and any proprietary data, credentials, or infrastructure details have
+        been removed or generalized.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Roberto Cervantes</span>
+      <span>Built &amp; hosted on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+
+</body>
+</html>
