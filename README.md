@@ -14,6 +14,8 @@ This repository is the source for [roberto-cervantes.com](https://roberto-cervan
 │   ├── styles.css
 │   ├── script.js
 │   ├── roberto-cervantes.jpg
+│   ├── cv-roberto-cervantes-en.pdf     # Downloadable CV — English
+│   ├── cv-roberto-cervantes-es.pdf     # Downloadable CV — Spanish
 │   └── projects/                       # Images used by each case study page
 ├── CNAME                               # Custom domain: roberto-cervantes.com
 └── README.md
